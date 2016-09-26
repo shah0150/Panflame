@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  
+<!-- Mirrored from www.masalamantra.ca/map.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Sep 2016 01:40:54 GMT -->
+<head>
+    <meta charset="utf-8">
+    <title>Directly accessing Street View data</title>
+    <!-- Stylesheets
+	============================================= -->
+	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	
+    <style>
+   
+      #map {
+        height: 400px;
+		max-height:400px;
+      }
+	   #mpano {
+        height: 400px;
+		max-height:400px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="map" class="col_half">Map</div> <div id="mpano" class="col_half col_last" > Pano1</div>
+ 
+    <script>
+/*
+ function initialize() {
+  var fenway =  {lat: 43.6434351, lng: -79.7081827};
+  var map = new google.maps.Map(document.getElementById('map'), {
+    center: fenway,
+    zoom: 14
+  });
+  var panorama = new google.maps.StreetViewPanorama(
+      document.getElementById('mpano'), {
+        position: fenway,
+        pov: {
+           heading: 250,
+      		pitch: 0
+        }
+      });
+  map.setStreetView(panorama);
+}
+*/
+var map;
+var panorama;
+
+function initMap() {
+  var berkeley = {lat:  51.042960, lng: -114.089267};
+  var sv = new google.maps.StreetViewService();
+
+  panorama = new google.maps.StreetViewPanorama(document.getElementById('mpano'));
+
+  // Set up the map.
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: berkeley,
+    zoom: 16,
+    streetViewControl: false
+  });
+
+  // Set the initial Street View camera to the center of the map
+  sv.getPanorama({location: berkeley, radius: 50}, processSVData);
+
+  // Look for a nearby Street View panorama when the map is clicked.
+  // getPanoramaByLocation will return the nearest pano when the
+  // given radius is 50 meters or less.
+  map.addListener('click', function(event) {
+    sv.getPanorama({location: event.latLng, radius: 50}, processSVData);
+  });
+}
+
+function processSVData(data, status) {
+  if (status === google.maps.StreetViewStatus.OK) {
+    var marker = new google.maps.Marker({
+      position: data.location.latLng,
+      map: map,
+      title: data.location.description
+    });
+
+    panorama.setPano(data.location.pano);
+    panorama.setPov({
+      heading: 250,
+      pitch: 0
+    });
+    panorama.setVisible(true);
+
+    marker.addListener('click', function() {
+      var markerPanoID = data.location.pano;
+      // Set the Pano to use the passed panoID.
+      panorama.setPano(markerPanoID);
+      panorama.setPov({
+        heading: 250,
+        pitch: 0
+      });
+      panorama.setVisible(true);
+    });
+  } else {
+    console.error('Street View data not found for this location.');
+  }
+}
+
+    </script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVQjPcjV4qDliEWIqHpE7v7ZxMiBBJot8&amp;signed_in=true&amp;callback=initMap"
+        async defer>
+    </script>
+  </body>
+
+<!-- Mirrored from www.masalamantra.ca/map.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 21 Sep 2016 01:40:54 GMT -->
+</html>

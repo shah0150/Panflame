@@ -1,24 +1,15 @@
-/*Main.CSS*/
-/*-----------------------------------------------------------------------------------------------------------------*/
-/* Author: creative-wp */
-/* Template Name: Majesty.*/
-/* Website: http://creative-wp.com/ */
-/* Copyright: (C) 2015 */
-/*--------------------------------------------------------------------------------
-/*Notebooks and Small Laptops*/
-
 @media (max-width: 1366px) {
     .art-3 .center .btn {
         margin-top: 10px;
     }
     .art-3 .head_title {
-		margin-bottom:10px;
+        margin-bottom: 10px;
     }
-	
-	.art-3 p {
-		padding:0 10px;
+    .art-3 p {
+        padding: 0 10px;
     }
 }
+
 /*iPad Landscape Mode and Large Tablets */
 
 @media (max-width: 1024px) {
@@ -57,7 +48,6 @@
         margin-top: 30px;
     }
     /* menu tabs style */
-    
     .menu_tabs div.our-menu-tab-menu {
         margin-top: 10%;
     }
@@ -85,11 +75,11 @@
         -ms-transform: translate(0%, 10%);
         transform: translate(0%, 10%);
     }
-
-	.slider-fullwidth .slider-content h1 {
-		margin-top:80px !important;
-	}
+    .slider-fullwidth .slider-content h1 {
+        margin-top: 80px !important;
+    }
 }
+
 /*Small Desktop and Very Small Notebook */
 
 @media (max-width: 980px) {
@@ -97,11 +87,11 @@
         margin-bottom: 40px;
     }
 }
+
 /*Medium Tablets */
 
 @media (max-width: 800px) {
     /* menu tabs style */
-    
     .menu_tabs {
         padding: 0 15px;
     }
@@ -156,11 +146,9 @@
     }
 }
 @media only screen and (max-width: 991px) {
-	
-	.blog-image img {
-		margin-bottom:30px;
-	}
-	
+    .blog-image img {
+        margin-bottom: 30px;
+    }
     .masonry_menu .menu-item {
         width: 48%;
         margin: 0 1%;
@@ -193,7 +181,6 @@
     /* ----------------------------------------------------------------
       Header
   -----------------------------------------------------------------*/
-    
     #header.header-transparent,
     #header,
     #header-wrap {
@@ -266,7 +253,6 @@
       Primary Menu
   -----------------------------------------------------------------*/
     /* center menu */
-    
     #header #main-menu.menu-center {
         display: block;
     }
@@ -544,7 +530,6 @@
     }
     /* Responsive Sticky Header
   -----------------------------------------------------------------*/
-    
     .right_bg2,
     .right_bg,
     .left_bg {
@@ -573,7 +558,6 @@
     /* -----------------------------------------------------------------
      Home page 2 responsive
      ----------------------------------------------------------------- */
-    
     .date-blocks .block-item {
         margin-bottom: 30px;
     }
@@ -599,7 +583,6 @@
         background-color: transparent !important;
     }
     /* center Header */
-    
     #header.center-header {
         padding: 0;
     }
@@ -632,14 +615,12 @@
     /* ----------------------------------------------------------------
       Home page 3
   -----------------------------------------------------------------*/
-    
     .app img {
         display: none;
     }
     /* ----------------------------------------------------------------
       Dark header 
   -----------------------------------------------------------------*/
-    
     #header.dark-header #main-menu > ul > li.sub-menu > a,
     #header.dark-header #main-menu > .container > ul > li.sub-menu > a {
         background-image: url("../img/sub-menu-dark.png");
@@ -656,7 +637,6 @@
     /* ----------------------------------------------------------------
   Vertical page
 -----------------------------------------------------------------*/
-    
     .vertical-menu #menu-button {
         left: 220px;
     }
@@ -667,7 +647,6 @@
     /* ----------------------------------------------------------------
   Main Menu - Overlay Menu
 -----------------------------------------------------------------*/
-    
     .overlay-menu:not(.top-search-open) #main-menu-trigger {
         opacity: 1;
         pointer-events: auto;
@@ -756,7 +735,6 @@
     /* ----------------------------------------------------------------
       no-logo 
   -----------------------------------------------------------------*/
-    
     #header.no-logo #main-menu-trigger,
     #header.no-logo #page-submenu-trigger {
         position: static;
@@ -773,7 +751,6 @@
     /* ----------------------------------------------------------------
       Blog
   -----------------------------------------------------------------*/
-    
     .blog_list .blog-content {
         margin-top: 60px;
     }
@@ -786,7 +763,6 @@
     /* ----------------------------------------------------------------
       Footer
   -----------------------------------------------------------------*/
-    
     #footer .our_location h3,
     #footer .latest_post h3 {
         margin-top: 0;
@@ -949,10 +925,6 @@
     .banner .slider-content h1 {
         margin-top: 30px;
     }
-	
-	
-	
-	
 }
 @media only screen and (min-width: 480px) and (max-width: 767px) {
     #header.full-header .container,
@@ -978,13 +950,11 @@
     #footer .latest_post h3 {
         margin-top: 40px;
     }
-	
-	.masonry_three .menu-item {
-	width: 49% !important;
-	}
-	
-	
+    .masonry_three .menu-item {
+        width: 49% !important;
+    }
 }
+
 /*iPhone 6 Landscape Mode*/
 
 @media screen and (max-width: 667px) {
@@ -1141,7 +1111,10 @@
         height: 0;
     }
 }
+
 /*Medium Smart Phones v2*/
+
+
 /*Google Nexus and Other Large Smart Phones v1*/
 
 @media screen and (max-width: 600px) {
@@ -1207,6 +1180,7 @@
         margin-right: 10px;
     }
 }
+
 /*iPhone Landscape Mode and Mediium Smart Phones*/
 
 @media screen and (max-width: 479px) {
@@ -1298,11 +1272,11 @@
     .sticky-header #logo {
         display: inline-block;
     }
-	
-	.masonry_three .menu-item {
-	width: 98% !important;
-	}
+    .masonry_three .menu-item {
+        width: 98% !important;
+    }
 }
+
 /*iPhone Portrait Mode and Very Small Mobile Phones*/
 
 @media screen and (max-width: 320px) {

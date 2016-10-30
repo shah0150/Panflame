@@ -287,6 +287,44 @@ h1 {
 .dark span {
     color: #fff
 }
+.gallery {
+    margin: 20px auto;
+    width: 900px;
+    height: 900px;
+    position: relative;
+}
+button {
+    display: block;
+    width: 200px;
+    height: 50px;
+    -webkit-transition-duration: 300ms;
+    -moz-transition-duration: 300ms;
+    -o-transition-duration: 300ms;
+    position: absolute;
+    cursor: pointer;
+    /*    backgroung-image: url("https://cdn-webimages.wimages.net/04fde40a5d39699514514f3e57b4eeca1e313-wm.jpg?v=3")*/
+}
+button:focus {
+    background-image: url("https://cdn-webimages.wimages.net/04fde40a5d39699514514f3e57b4eeca1e313-wm.jpg?v=3");
+    width: 100%;
+    height: 100%;
+    /*     margin-left:-50%; line added */
+    /*     margin-top:-50%; /* line added */
+    */ position: absolute;
+    opacity: 1;
+    z-index: 0;
+    color: red;
+    -moz-box-shadow: 0 0 15px 2px #000;
+    -webkit-box-shadow: 0 0 15px 2px #000;
+    box-shadow: 0 0 15px 2px #000;
+    -webkit-transition-duration: 1s;
+    -webkit-transition-delay: 0.3s;
+    -moz-transition-duration: 2s;
+    -moz-transition-delay: 0.3s;
+    -o-transition-duration: 2s;
+    -o-transition-delay: 0.3s;
+    cursor: default;
+}
 .dark a:hover,
 .dark button:hover {
     color: #c59d5f
